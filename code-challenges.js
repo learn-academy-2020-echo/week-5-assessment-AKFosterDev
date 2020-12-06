@@ -135,6 +135,44 @@ console.log(fullHouseChecker(hand4))
 var hand5 = ['K', 5, 'K', 5, 'K']
 // Expected output: true
 var hand6 = ['A', 'Q', 'A', 5, 3]
+
+const fullHouseChecker2 = (arr) => {
+	// create variable to hold converted array
+	let intArray = []
+	// map over array
+	// create conditional to push letters converted in to integers to new array
+	arr.map((item) => {
+		if (item === 'A') {
+			return intArray.push(1)
+		} else if (item === 'J') {
+			return intArray.push(11)
+		} else if (item === 'Q') {
+			return intArray.push(12)
+		} else if (item === 'K') {
+			return intArray.push(13)
+		} else {
+			return intArray.push(item)
+		}
+	})
+
+	// create variable to hold sorted array
+	let sorted = intArray.sort((a, b) => a - b)
+	// create conditional to check if values equal
+	if (
+		(sorted[0] === sorted[1] &&
+			sorted[1] === sorted[2] &&
+			sorted[3] === sorted[4]) ||
+		(sorted[0] === sorted[1] &&
+			sorted[2] === sorted[3] &&
+			sorted[3] === sorted[4])
+	) {
+		return true
+	} else {
+		return false
+	}
+}
+
 // Expected output: false
-console.log(hand6.sort((a, b) => a - b))
-console.log('Problem #3S')
+console.log('Problem #3 - Stretch')
+console.log(fullHouseChecker2(hand5))
+console.log(fullHouseChecker2(hand6))
