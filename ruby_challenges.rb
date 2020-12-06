@@ -21,7 +21,7 @@ class Bike
   end
 
   def pedal_faster num
-    @speed = @speed + num
+    @speed += num
   end
 
   def brake num
