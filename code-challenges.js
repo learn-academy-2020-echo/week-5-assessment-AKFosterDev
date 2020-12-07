@@ -11,22 +11,20 @@ var secretCodeWord2 = 'gobbledygook'
 // Create a function that takes a string
 const secretCodeConverter = (str) => {
 	// convert string to an array - held in variable
-	let strArray = str.split('')
 	// create an array to hold new values
-	let newArray = []
 	// map over array
-	strArray.map((letter) => {
+	let newArray = str.split('').map((letter) => {
 		// check each letter and change based on letter being a, e, i or o
 		if (letter === 'a' || letter === 'A') {
-			return newArray.push('4')
+			return '4'
 		} else if (letter === 'e' || letter === 'E') {
-			return newArray.push('3')
+			return '3'
 		} else if (letter === 'i' || letter === 'I') {
-			return newArray.push('1')
+			return '1'
 		} else if (letter === 'o' || letter === 'O') {
-			return newArray.push('0')
+			return '0'
 		} else {
-			return newArray.push(letter)
+			return letter
 		}
 	})
 	// convert array back to string (join(''))
@@ -42,15 +40,15 @@ const secretCodeConverter2 = (str) => {
 	let newArray = str.split('').map((letter) => {
 		// check each letter and change based on letter being a, e, i or o
 		if (letter === 'a' || letter === 'A') {
-			return newArray.push('4')
+			return '4'
 		} else if (letter === 'e' || letter === 'E') {
-			return newArray.push('3')
+			return '3'
 		} else if (letter === 'i' || letter === 'I') {
-			return newArray.push('1')
+			return '1'
 		} else if (letter === 'o' || letter === 'O') {
-			return newArray.push('0')
+			return '0'
 		} else {
-			return newArray.push(letter)
+			return letter
 		}
 	})
 	// convert array back to string (join(''))
