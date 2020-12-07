@@ -37,11 +37,9 @@ const secretCodeConverter = (str) => {
 // REFACTOR ORIGINAL CODE
 const secretCodeConverter2 = (str) => {
 	// create an array to hold new values
-	let newArray = []
-
 	// convert string to an array - held in variable
 	// map over array
-	str.split('').map((letter) => {
+	let newArray = str.split('').map((letter) => {
 		// check each letter and change based on letter being a, e, i or o
 		if (letter === 'a' || letter === 'A') {
 			return newArray.push('4')
