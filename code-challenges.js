@@ -95,6 +95,21 @@ const wordsWithA = (arr) => {
 console.log('Problem #2')
 console.log(wordsWithA(arrayOfWords))
 
+// REFACTOR USING FILTER
+const wordsWithA2 = (arr) => {
+	// create a variable to hold new array of words with 'a'
+	// iterate over each word in the array
+	// determine if word includes the letter a
+	// if does include an 'a' filter it to new array
+	// return the words that include an 'a' as strings
+	let aWords = arr.filter((word) => word.includes('a') || word.includes('A'))
+	return aWords.join(' ')
+}
+
+// call the function
+console.log('Problem #2 - Refactor')
+console.log(wordsWithA2(arrayOfWords))
+
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is exactly one pair and one three of a kind.
 
 var hand1 = [5, 5, 5, 3, 3]
