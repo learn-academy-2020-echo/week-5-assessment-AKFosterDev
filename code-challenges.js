@@ -17,13 +17,13 @@ const secretCodeConverter = (str) => {
 	// map over array
 	strArray.map((letter) => {
 		// check each letter and change based on letter being a, e, i or o
-		if (letter === 'a') {
+		if (letter === 'a' || letter === 'A') {
 			return newArray.push('4')
-		} else if (letter === 'e') {
+		} else if (letter === 'e' || letter === 'E') {
 			return newArray.push('3')
-		} else if (letter === 'i') {
+		} else if (letter === 'i' || letter === 'I') {
 			return newArray.push('1')
-		} else if (letter === 'o') {
+		} else if (letter === 'o' || letter === 'O') {
 			return newArray.push('0')
 		} else {
 			return newArray.push(letter)
@@ -43,13 +43,13 @@ const secretCodeConverter2 = (str) => {
 	// map over array
 	str.split('').map((letter) => {
 		// check each letter and change based on letter being a, e, i or o
-		if (letter === 'a') {
+		if (letter === 'a' || letter === 'A') {
 			return newArray.push('4')
-		} else if (letter === 'e') {
+		} else if (letter === 'e' || letter === 'E') {
 			return newArray.push('3')
-		} else if (letter === 'i') {
+		} else if (letter === 'i' || letter === 'I') {
 			return newArray.push('1')
-		} else if (letter === 'o') {
+		} else if (letter === 'o' || letter === 'O') {
 			return newArray.push('0')
 		} else {
 			return newArray.push(letter)
